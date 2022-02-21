@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  compiler:
+    build:
+      context: ./godot/
+      dockerfile: ./../Dockerfile
+    container_name: compiler
+    restart: "no"
+    tty: true
+    volumes:
+      - ./godot/:/var/godot/
+      - ./compile.sh:/var/compile.sh
+    entrypoint: /var/compile.sh
