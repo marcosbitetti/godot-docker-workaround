@@ -1,7 +1,7 @@
 default: upgrade
 
 upgrade:
-	./pull.sh
 	./backup.sh
+	./pull.sh
 	docker-compose up
 

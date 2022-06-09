@@ -1,5 +1,5 @@
 #!/bin/bash
-compiled='godot/bin/godot.linuxbsd.tools.64'
+compiled='godot/bin/godot.linuxbsd.opt.tools.64'
 releasesPath='godot-releases'
 if [ ! -e $compiled ]
 then
@@ -11,7 +11,7 @@ then
     chmod 777 $releasesPath
 fi
 newname=$releasesPath
-newname+='/godot.linuxbsd.tools.64.'
+newname+='/godot.linuxbsd.opt.tools.64.'
 #newname+=$(date +"%s")
 cd godot
 newname+=$(git rev-parse HEAD)
