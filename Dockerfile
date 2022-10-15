@@ -2,8 +2,7 @@ FROM ubuntu:focal
 RUN apt-get update
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository -y ppa:kisak/kisak-mesa
-RUN apt-get update
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
     build-essential \
     scons \
     pkg-config \
@@ -17,8 +16,10 @@ RUN apt-get install -y \
     libudev-dev \
     libxi-dev \
     libxrandr-dev \
+    libfontconfig1-dev \
     yasm \
     gcc \
+    gcc-c++ \
     libasound2-dev \
     libx11-dev \
     libgl1-mesa-dev \
@@ -26,4 +27,6 @@ RUN apt-get install -y \
     libxinerama-dev \
     libxi-dev \
     libxrandr-dev \
-    libudev-dev
+    libudev-dev \
+    libdbus-1-dev \
+    libspeechd-dev
